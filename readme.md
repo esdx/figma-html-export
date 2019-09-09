@@ -6,11 +6,11 @@ Several things work in this script that is not yet implemented in the latter.
 Like gradients and boolean groups (but boolean groups only converted to images here).
 
 ### Some notes
-•All blocks positioned absolutely
-•Constraints will be considered during export If your Figma page have a block centered inside parent frame with corresponding constaints  it will be centered in output (e.g. like so: left:50% trosform:franslateY(-50%))
-•If something rendered in a wrong way you may try assigning export (png or svg) setting to it in Figma ad set stopOnExport:true
-•Styles for test objects will be added to documents but @font-face not. Some fonts you have localy will work
-•Set line height for text manually (api provide slightly wrong values otherwise)
+•All blocks positioned absolutely  
+•Constraints will be considered during export If your Figma page have a block centered inside parent frame with corresponding constaints  it will be centered in output (e.g. like so: left:50% trosform:franslateY(-50%))  
+•If something rendered in a wrong way you may try assigning export (png or svg) setting to it in Figma ad set stopOnExport:true  
+•Styles for test objects will be added to documents but @font-face not. Some fonts you have localy will work  
+•Set line height for text manually (api provide slightly wrong values otherwise)  
 •Top level frames exported as separate html files. Transitions between them converted to links. If you need just one frame use "targetFrame" in your config.json
 
 ### Installation
@@ -27,6 +27,6 @@ Create config.json with following fields
     "downloadStackSize":30 <--- to reduse numder of requests that will be send to API images will be requested by stacks  
 }  
 ### Usage
-node figma-html-export.js
-files should appear in html folder
-to update images remove cache folder
+node figma-html-export.js  
+files should appear in html folder  
+to update images remove cache folder  
