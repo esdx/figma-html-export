@@ -1,0 +1,28 @@
+{
+  "name": "figma-html-export",
+  "version": "1.0.0",
+  "description": "tries to export static html fite from your figma project using its REST API",
+  "main": "figma-html-export.js",
+  "scripts": {
+    "test": "test",
+    "figma-html-export": "node figma-html-export.js",
+    "start": "node figma-html-export.js"
+  },
+  "keywords": [
+    "figma",
+    "html",
+    "export"
+  ],
+  "author": "esdx",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "file-system-cache": "^1.0.5",
+    "jsdom": "^15.1.1",
+    "md5": "^2.2.1"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0"
+  }
+}
