@@ -31,6 +31,7 @@ Create config.json with following fields
     "downloadStackSize":30 <--- to reduse numder of requests that will be send to API images will be requested by stacks  
 }  
 ### Usage
-node figma-html-export.js  
-files should appear in html folder  
+node --experimental-modules  figma-html-export.mjs  
+or npm start  
+files should appear in the html folder  
 to update images remove cache folder  

@@ -1,10 +1,13 @@
-const jsdom = require("jsdom");
+//const jsdom = require("jsdom");
+import jsdom from 'jsdom'
 const { JSDOM } = jsdom;
-const fs = require('fs');
-const md5 = require('md5');
+//const fs = require('fs');
+import fs from 'fs'
+import md5 from 'md5'
+//const md5 = require('md5');
 import { isObject, isString, isArray, isNull } from 'util';
-import {getImageMap} from './request.js';
-import {stack} from './request.js'
+import {getImageMap} from './request.mjs';
+import {stack} from './request.mjs'
 
 export function processPage(r, pageName){
     if (isString(r)) r=JSON.parse(r);

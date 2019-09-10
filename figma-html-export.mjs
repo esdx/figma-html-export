@@ -1,6 +1,6 @@
 
-const fs = require('fs')
-const path = require('path')
+import fs from 'fs'
+import path from 'path'
 let configPath="./config.json"
 
 var config = JSON.parse(fs.readFileSync(configPath, 'utf8'))
@@ -18,8 +18,8 @@ if(!fs.existsSync(path.resolve('html/images'))) fs.mkdirSync(path.resolve('html/
 if(!fs.existsSync(path.resolve('cache'))) fs.mkdirSync(path.resolve('cache'))
 
 
-import {requestFile} from './modules/request.js'
-import {processPage} from './modules/processPage.js'
+import {requestFile} from './src/request.mjs'
+import {processPage} from './src/processPage.mjs'
 
-let data=requestFile(linkFile, XFigmaToken, figmaFileID, true)  //link to file, token, get cached
+let data=requestFile(linkFile, XFigmaToken, figmaFileID, false)  //link to file, token, get cached
 data.then((result) => {processPage(result, FigmaPageName);}) //start result processing

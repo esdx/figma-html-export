@@ -1,10 +1,14 @@
-const fs = require('fs')
+/*const fs = require('fs')
 const path = require('path')
-const axios = require('axios')
-import Cache from "file-system-cache"
-const cache = Cache({
-    basePath: "./cache", // Path where cache files are stored
+const axios = require('axios')*/
+import fs from 'fs'
+import path from 'path'
+import axios from 'axios'
 
+import Cache from 'file-system-cache'
+console.log(Cache)
+const cache = Cache.default ({
+    basePath: "./cache", // Path where cache files are stored
   })
 
 let requestFile = function(link, token, fileID, cached) {
